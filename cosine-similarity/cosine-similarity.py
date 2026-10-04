@@ -6,6 +6,4 @@ def cosine_similarity(a: list, b: list) -> float:
     """
     # Write code here
     ab = (np.linalg.norm(a) * np.linalg.norm(b))
-    if ab != 0:
-        return(float(np.dot(a, b) / ab))
-    return 0.0
+    return(0.0 if ab == 0 else float(np.dot(a, b) / ab))
